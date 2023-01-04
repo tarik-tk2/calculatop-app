@@ -21,7 +21,8 @@ deleteId.addEventListener("click", () => {
         const digitSplit = displayId.innerText.split("")
         console.log(digitSplit);
         digitSplit.pop()
-        displayId.innerText = digitSplit;
+        const remainDegit=digitSplit.join('')
+        displayId.innerText = remainDegit;
         console.log(digitSplit)
         if (digitSplit.length === 0) { 
             clear()
