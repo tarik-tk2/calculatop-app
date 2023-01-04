@@ -18,16 +18,21 @@ delete  number
 const deleteId = document.getElementById("delet");
 deleteId.addEventListener("click", () => {
     if (displayValue > 0) {
-        const digitSplit = displayId.innerText.split("")
-        console.log(digitSplit);
-        digitSplit.pop()
-        const remainDegit=digitSplit.join('')
-        displayId.innerText = remainDegit;
-        console.log(digitSplit)
-        if (digitSplit.length === 0) { 
+        const displayDigitSplit = displayId.innerText.split("")
+        displayDigitSplit.pop()
+        const remainDisplayDigit=displayDigitSplit.join('')
+        displayId.innerText = remainDisplayDigit;
+        if (displayDigitSplit.length === 0) { 
             clear()
         }
-    }
-    
-   
+    }     
 })
+//append number
+document.querySelectorAll('[data-number]').forEach(number => { 
+    number.addEventListener("click", (e) => {
+        if (displayValue) { 
+            displayId.innerText=displayId.innerText+e.target.innerText
+        }
+    })
+})
+
