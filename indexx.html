@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+        <main class="w-[400px] bg-red-500  mx-[300px] my-[20px] h-[600px] rounded">
+           <div>
+            <!-- <input type="text" name="" id="input_id" class="p-5 mt-2 w-96 mx-2 rounded border-4 border-black-200 border-x-black-500 font-bold text-4xl my-2"> -->
+             <div data-previous-operand id="display" class="bg-white previous-operand p-5 mt-2 w-96 mx-2 rounded border-4 border-black-200 border-x-black-500 font-bold text-4xl my-2">1234</div>
+              <div data-current-operand class="current-operand"></div>
+          </div>
+            <!--  top -->
+           <div class=" grid grid-cols-2 gap-4 m-2">
+            <button class="bg-yellow-100 p-2 text-center " id ="allClear" data-all-clear="">AC</button>
+            <div class="grid grid-cols-2 gap-4 ">
+                <button class="bg-yellow-100 p-2 text-center"  id="delet"data-delete>DEL</button>
+                <button class="bg-yellow-100 p-2 text-center" data-operation>/</button>
+            </div>
+           </div>
+           <!--  degit part -->
+            <div class="grid grid-cols-4 gap-4 m-2">
+                <button class="bg-yellow-100 p-2 text-center" dta-number>1</button>
+                <button class="bg-yellow-100 p-2 text-center" data-number>2</button>
+                <button class="bg-yellow-100 p-2 text-center" data-number>3</button>
+                <button class="bg-yellow-100 p-2 text-center" data-operation>*</button>
+            </div>
+             <!--  degit part -->
+            <div class="grid grid-cols-4 gap-4 m-2">
+                <button class="bg-yellow-100 p-2 text-center " data-number>4</button>
+                <button class="bg-yellow-100 p-2 text-center" data-number>5</button>
+                <button class="bg-yellow-100 p-2 text-center"data-number>6</button>
+                <button class="bg-yellow-100 p-2 text-center"data-operation>+</button>
+            </div>
+             <!--  degit part -->
+            <div class="grid grid-cols-4 gap-4 m-2">
+                <button class="bg-yellow-100 p-2 text-center" data-number>7</button>
+                <button class="bg-yellow-100 p-2 text-center"data-number>8</button>
+                <button class="bg-yellow-100 p-2 text-center"data-number>9</button>
+                <button class="bg-yellow-100 p-2 text-center" data-operation>-</button>
+            </div>
+              <div class="grid grid-cols-2 gap-4 m-2">
+                <div class="grid grid-cols-2 gap-4">
+                    <button class="bg-yellow-100 p-2 text-center" data-number>.</button>
+                <button class="bg-yellow-100 p-2 text-center" data-number>0</button>
+                </div>
+                <button class="bg-yellow-100 p-2 text-center" data-equals>=</button>
+                
+            </div>
+        </main>
+    </section>
+    <script src="indext.js"></script>
+  </body>
+</html>
