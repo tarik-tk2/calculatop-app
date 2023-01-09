@@ -1,13 +1,13 @@
 // //display button
 // const displayId = document.getElementById("display");
-// const displayValue = parseFloat(displayId.innerText);
+// const displayValue = parseFloat(displayId.value);
 // let preValue = '';
 // let currentValue = '';
 
 // // clar all button
 
 // function clear() {
-// displayId.innerText = "0";
+// displayId.value = "0";
 //  }
 // const allClear = document.getElementById("allClear");
 // allClear.addEventListener("click", () => {
@@ -18,10 +18,10 @@
 // const deleteId = document.getElementById("delet");
 // deleteId.addEventListener("click", () => {
 //     if (displayValue > 0) {
-//         const displayDigitSplit = displayId.innerText.split("")
+//         const displayDigitSplit = displayId.value.split("")
 //         displayDigitSplit.pop()
 //         const remainDisplayDigit=displayDigitSplit.join('')
-//         displayId.innerText = remainDisplayDigit;
+//         displayId.value = remainDisplayDigit;
 //         if (displayDigitSplit.length === 0) {
 //             clear()
 //         }
@@ -31,7 +31,7 @@
 // document.querySelectorAll('[data-number]').forEach(number => {
 //     number.addEventListener("click", (e) => {
 //         if (displayValue) {
-//             displayId.innerText=displayId.innerText+e.target.innerText
+//             displayId.value=displayId.value+e.target.value
 //         }
 //     })
 // })
@@ -39,8 +39,8 @@
 // document.querySelectorAll("[data-operation]").forEach(operation => {
 //     operation.addEventListener('click', (e) => {
 //         if (displayValue ) {
-//             displayId.innerText = displayId.innerText + e.target.innerText;
-//             if (e.target.innerText === "*") {
+//             displayId.value = displayId.value + e.target.value;
+//             if (e.target.value === "*") {
 
 //             }
 //         }
@@ -54,28 +54,30 @@ function allData() {
   const allClear = document.getElementById("allClear");
     let result = document.getElementById("equal");
     let del = document.getElementById("delet")
+   
   
 
   button.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-      let value = e.target.innerText;
-      screen.innerText += value;
+      let val = e.target.innerText;
+        screen.value += val;
+        console.log(val);
     });
   });
     result.addEventListener("click", (e) => {
-        if (screen.innerText === '') {
-            screen.innerText = "";
+        if (screen.value === '') {
+            screen.value = "";
         } else {
-            let answer = eval(screen.innerText)
-            screen.innerText=answer
+            let answer = eval(screen.value)
+            screen.value=answer
          }
     })
     del.addEventListener("click", (e) => { 
-        let value = (screen.innerText).substring(0, (screen.innerText.toString().length - 1))
-        screen.innerText=value
+        let value = (screen.value).substring(0, (screen.value.toString().length - 1))
+        screen.value=value
     })
     allClear.addEventListener("click", (e) => {
-       screen.innerText=''
+       screen.value=''
     })
 }
 allData();
